@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux';
-import {counterReducer} from './Reducer'
+import { headerReducer, OrderReducer, settingReducer } from './ViewReducer';
 
 const rootReducer = combineReducers({
-    counter: counterReducer
+  header: headerReducer,
+  order: OrderReducer,
+  setting: settingReducer,
 });
 
 export default rootReducer;
-

@@ -1,10 +1,26 @@
 import { Action } from 'redux';
-import {ActionType} from '../constants/ActionTypes'
+import * as ActionType from '../constants/ActionTypes';
+import { IKind } from './SelectableItemsInterFace';
 
-
-export interface IAction extends Action {
-  type: ActionType;
+export interface IViewAction extends Action {
+  type: ActionType.ViewType;
   data: {
-    n: number
+    viewType: string;
+  };
+}
+
+export interface IOrderAction extends Action {
+  type: ActionType.ViewType;
+  data: {
+    amount: number;
+    price: number;
+  };
+}
+
+export interface ISettingAction extends Action {
+  type: ActionType.ViewType;
+  data: {
+    userName: string;
+    kind: IKind[];
   };
 }

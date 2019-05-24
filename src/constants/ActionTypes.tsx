@@ -1,4 +1,15 @@
-export enum ActionType {
+export enum CounterType {
   INCREMENT = 'INCREMENT',
-  DECREASE = 'DECREASE'
+  DECREASE = 'DECREASE',
+}
+
+export enum ViewType {
+  VIEWCHANGE = 'VIEWCHANGE',
+  USER_NAME = 'USER_NAME',
+  CHECK_BOX = 'CHECK_BOX',
+  AMOUNT = 'AMOUNT',
+  PRICE = 'PRICE',
+  CALC = 'CALC',
+  USER_VIEW = 'USER_VIEW',
+  ORDER_VIEW = 'ORDER_VIEW',
 }

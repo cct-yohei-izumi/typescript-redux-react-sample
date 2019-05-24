@@ -1,20 +1,18 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import {createStore } from 'redux';
+import { createStore } from 'redux';
+import HeaderContainer from './containers/HeaderContainer';
+import ViewContainer from './containers/ViewContainer';
+import rootReducer from './reducers/RootReducer';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-import Container from './containers/Container'
-import rootReducer from './reducers/RootReducer'
-import registerServiceWorker from './registerServiceWorker';
-
-
-
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, composeWithDevTools());
 
 ReactDOM.render(
   <Provider store={store}>
-    <Container />
+    <HeaderContainer />
+    <ViewContainer />
   </Provider>,
   document.getElementById('root') as HTMLElement
-  );
-  registerServiceWorker();
+);
